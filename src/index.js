@@ -10,7 +10,8 @@ app.use(express.json());
 
 const menuRoutes = require("./routes/menu");
 const orderRoutes = require("./routes/orders");
-
+const cors = require("cors");
+app.use(cors());
 app.use("/api/menu", menuRoutes);
 app.use("/api/orders", orderRoutes);
 
